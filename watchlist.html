@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Watchlist • Ciné Fahmi</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="app-header">
+    <div class="container nav3">
+      <a class="brand brand--link" href="index.html" aria-label="Ciné Fahmi - Accueil">
+        <div class="logo" aria-hidden="true">CF</div>
+        <span class="brand-name">cinefahmi</span>
+      </a>
+
+      <nav class="nav-center" aria-label="Navigation principale">
+        <a class="nav-link" href="index.html#home">Home</a>
+        <span class="nav-sep">|</span>
+        <a class="nav-link" href="index.html#cinemas">Our Cinemas</a>
+        <span class="nav-sep">|</span>
+        <a class="nav-link" href="index.html#movies">Our Movies</a>
+        <span class="nav-sep">|</span>
+        <a class="nav-link is-active" href="watchlist.html">Watchlist</a>
+      </nav>
+
+      <div class="nav-actions">
+        <button id="btnSearch" class="icon-btn icon-btn--nav" type="button" aria-label="Rechercher">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <path d="M10.5 19a8.5 8.5 0 1 1 0-17 8.5 8.5 0 0 1 0 17Z" stroke="currentColor" stroke-width="2"/>
+            <path d="M21 21l-4.3-4.3" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+        </button>
+        <button id="btnAuth" class="btn btn-auth" type="button">Login</button>
+      </div>
+    </div>
+
+    <div class="container searchbar" id="searchbar" hidden>
+      <input id="searchInput" type="search" placeholder="Rechercher un cinéma ou un film…" autocomplete="off" />
+      <button id="btnSearchClose" class="btn btn-ghost" type="button">Fermer</button>
+    </div>
+
+    <div class="container auth-hint">
+      <span id="authStatus" class="muted"></span>
+    </div>
+  </header>
+
+  <main class="container section">
+    <div class="section-head">
+      <h2>My Watchlist</h2>
+      <p class="muted">Ici l’utilisateur peut noter chaque film de sa liste (note personnelle).</p>
+    </div>
+
+    <div id="watchlistEmpty" class="panel" hidden>
+      <div class="panel-body">
+        <h3>Votre watchlist est vide.</h3>
+        <p class="muted">Ajoute un film depuis “Our Movies” ou depuis l’affiche de la page d’accueil.</p>
+        <a class="btn btn-ghost" href="index.html#movies">Go to movies</a>
+      </div>
+    </div>
+
+    <div id="watchlistGrid" class="grid grid--list"></div>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-row">
+      <span class="muted">Ciné Fahmi • Watchlist</span>
+      <span class="muted">Date: <span id="today"></span></span>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
