@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <?php
 
 require_once dirname(__DIR__) . '/db.php';
@@ -132,3 +133,6 @@ try {
 		'message' => 'Unable to create reservation.'
 	]);
 }
+=======
+
+>>>>>>> 61b92f288759bb59d2d8332bcd1546b076122c90
